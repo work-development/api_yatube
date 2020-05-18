@@ -1,0 +1,6 @@
+pytest-django
+requests
+pillow
+sorl-thumbnail
+django
+djangorestframework
