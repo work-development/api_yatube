@@ -4,3 +4,4 @@ pillow
 sorl-thumbnail
 django
 djangorestframework
+drf-nested-routers
