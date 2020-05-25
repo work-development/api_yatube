@@ -5,7 +5,7 @@ from .serializers import PostSerializer, CommentSerializer
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from .permissions import IsOwnerOrReadOnly, IsOwnerOrReadOnlyComment
+from .permissions import IsOwnerOrReadOnly
 
 
 
@@ -22,7 +22,7 @@ class PostViewSet(viewsets.ModelViewSet):
 class CommentsViewSet(viewsets.ModelViewSet):
 
     serializer_class = CommentSerializer
-    permission_classes = [IsAuthenticated, IsOwnerOrReadOnlyComment]
+    permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
