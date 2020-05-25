@@ -41,12 +41,14 @@ INSTALLED_APPS = [
     'app',
     'rest_framework.authtoken',
     'rest_framework.routers',
+    'rest_framework',
     'corsheaders',
 ]
 
 REST_FRAMEWORK = {        
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated', 
+        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly'
     ],
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
