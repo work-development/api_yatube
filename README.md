@@ -1,4 +1,4 @@
-# API для проекта Yatube 
+# CRUD (Create, read, update and delete) API для Yatube
 
 Реализовано API для всех моделей приложения posts.    
 
